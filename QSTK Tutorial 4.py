@@ -41,9 +41,9 @@ def main():
     c_dataobj = da.DataAccess('Yahoo')
 
     # List of symbols - First 20
-    ls_symbols = c_dataobj.get_symbols_from_list('sp5002012')
-    ls_symbols = ls_symbols[:20]
-    ls_symbols.append('_CASH')
+    ls_symbols = c_dataobj.get_symbols_from_list('sp5002012') # 获取2012年sp50的成分股票名称
+    ls_symbols = ls_symbols[:20] #取前20只股票
+    ls_symbols.append('_CASH') #增加一个代码，cash
 
     # Creating the first allocation row
     na_vals = np.random.randint(0, 1000, len(ls_symbols))
